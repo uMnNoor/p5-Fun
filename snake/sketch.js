@@ -24,9 +24,7 @@ function draw() {
   food.eat(snake.head);
   food.checkSnake(snake.body);
   snake.show();
-  if (click === true) {
-    snake.update();
-  }
+  snake.update();
   snake.checkCollision();
   food.show();
 }
