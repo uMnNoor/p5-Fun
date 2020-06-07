@@ -3,11 +3,15 @@ let food;
 let c = 20;
 let score = 0;
 let click = null;
-let windowWidth = window.width;
+let windowWidth = window.screen.width;
 
 function setup() {
   createCanvas(400, 440);
-  frameRate(10);
+  if (windowWidth <= 768) {
+    frameRate(5);
+  } else {
+    frameRate(10);
+  }
   snake = new Snake(width / 2, height / 2, c);
   food = new Food(round(random(0, 19)) * 20, round(random(2, 21)) * 20, c);
 }
