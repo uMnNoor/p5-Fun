@@ -2,6 +2,8 @@ let snake;
 let food;
 let c = 20;
 let score = 0;
+let click = null;
+let windowWidth = window.width;
 
 function setup() {
   createCanvas(400, 440);
@@ -11,7 +13,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(45, 123, 182);
   fill(200);
   noStroke();
   square(0, 40, 400);
@@ -22,7 +24,9 @@ function draw() {
   food.eat(snake.head);
   food.checkSnake(snake.body);
   snake.show();
-  snake.update();
+  if (click === true) {
+    snake.update();
+  }
   snake.checkCollision();
   food.show();
 }

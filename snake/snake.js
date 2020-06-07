@@ -10,8 +10,8 @@ class Snake {
   show() {
     for (let i = 0; i < this.body.length; i++) {
       if (i === 0) {
-        fill(0);
-        stroke(0);
+        fill(45, 123, 182);
+        stroke(45, 123, 182);
         square(this.body[i].x, this.body[i].y, this.c);
       } else {
         fill(100);
@@ -167,6 +167,13 @@ class Snake {
     }
   }
 
+  eatFood(food) {
+    if (food.x === this.head.x && food.y === this.head.y) {
+      let newBody = new p5.Vector(this.body[this.body.length - 1]);
+      this.body.push(newBody);
+    }
+  }
+
   gameOver() {
     keyCode = null;
     this.body = [];
@@ -174,12 +181,5 @@ class Snake {
     this.head.y = 400 / 2;
     this.body.push(this.head);
     score = 0;
-  }
-
-  eatFood(food) {
-    if (food.x === this.head.x && food.y === this.head.y) {
-      let newBody = new p5.Vector(this.body[this.body.length - 1]);
-      this.body.push(newBody);
-    }
   }
 }

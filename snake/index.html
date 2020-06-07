@@ -3,12 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../main.css" />
     <script src="../p5/p5.js"></script>
     <title>Snake</title>
   </head>
   <body>
+    <div class="game-pad">
+      <div class="up-button">
+        <button id="up">UP</button>
+      </div>
+      <div class="lr-button">
+        <button id="left">LEFT</button>
+        <button id="right">RIGHT</button>
+      </div>
+      <div class="down-button">
+        <button id="down">DOWN</button>
+      </div>
+    </div>
+
     <script src="food.js"></script>
     <script src="snake.js"></script>
     <script src="sketch.js"></script>
+    <script src="buttons.js"></script>
   </body>
 </html>

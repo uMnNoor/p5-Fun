@@ -6,8 +6,8 @@ class Food {
   }
 
   show() {
-    fill(255, 0, 0);
-    stroke(255, 0, 0);
+    fill(237, 34, 93);
+    stroke(237, 34, 93);
     square(this.pos.x, this.pos.y, this.c);
   }
 
